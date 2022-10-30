@@ -172,3 +172,5 @@ function B2(){
     }
     document.getElementById("infoB2").innerHTML = "Tổng : "+sum ;
 }
+
+//B3
