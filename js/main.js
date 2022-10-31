@@ -175,4 +175,45 @@ function B2(){
 
 //B3
 
+function fractorial(x){
+    if(x === 0){
+        return 1;
+    }
+    return x * fractorial(x-1);
+}
+
+function B3(){
+    var x = document.getElementById("b3").value*1;
+    console.log(x);
+    document.getElementById("infoB3").innerHTML = fractorial(x) ;
+}
 //B4
+
+function check_Prime(n){
+    if (n <= 1){
+        return false;
+    }
+    if (n % 2 == 0 && n >2){
+        return false;
+    }
+    const s = Math.sqrt(n);
+    for (let i = 3; i <= s;i+=2){
+        if(n%1 ===0){
+            return false;
+        }
+    }
+    return true;
+}
+function B5(){
+    var n = document.getElementById("b5").value*1;
+    var x =[];
+    for(var i = 0; i <= n;i++){
+        // console.log(check_Prime(i));
+        var check = check_Prime(i);
+        if (check == true){
+            x.push(i);
+            
+        }
+    }
+    document.getElementById("infoB5").innerHTML = x ;
+}
