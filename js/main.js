@@ -190,9 +190,15 @@ function B3(){
 //B5
 
 function check_Prime(n){
-    if (n <= 1){
-        return false;
-    }
+    var flag = true;
+    if(n < 2){
+        flag = false;
+    } else {
+        for (var i = 2; i <n-1; i++){
+            if (n%i == 0){
+                flag = false;
+                break;
+            }
     if (n % 2 == 0 && n >2){
         return false;
     }
@@ -202,7 +208,6 @@ function check_Prime(n){
             return false;
         }
     }
-    return true;
 }
 function B5(){
     var n = document.getElementById("b5").value*1;
