@@ -190,24 +190,17 @@ function B3(){
 //B5
 
 function check_Prime(n){
-    var flag = true;
     if(n < 2){
-        flag = false;
+        return false;
     } else {
         for (var i = 2; i <n-1; i++){
             if (n%i == 0){
-                flag = false;
+                return false;
                 break;
             }
-    if (n % 2 == 0 && n >2){
-        return false;
-    }
-    const s = Math.sqrt(n);
-    for (let i = 3; i <= s;i+=2){
-        if(n%1 ===0){
-            return false;
         }
     }
+    return true;
 }
 function B5(){
     var n = document.getElementById("b5").value*1;
@@ -217,7 +210,6 @@ function B5(){
         var check = check_Prime(i);
         if (check == true){
             x.push(i);
-            
         }
     }
     document.getElementById("infoB5").innerHTML = x ;
