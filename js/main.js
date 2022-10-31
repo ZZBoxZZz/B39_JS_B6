@@ -187,7 +187,7 @@ function B3(){
     console.log(x);
     document.getElementById("infoB3").innerHTML = fractorial(x) ;
 }
-//B4
+//B5
 
 function check_Prime(n){
     if (n <= 1){
@@ -216,4 +216,24 @@ function B5(){
         }
     }
     document.getElementById("infoB5").innerHTML = x ;
+}
+
+//B4
+
+function B4(){
+    var mang = [];
+    var text = "";
+    for(var i =1; i <= 10 ; i ++){
+        if(i%2 == 0 ){
+            // chan += "<div><p>"
+            // chan += "Đây là thẻ div chẵn  "+i+" </p></div>";
+            mang.push(i);
+            text += "<div class ='b4_style_chan'><p>Đây là số chẵn "+mang[i-1]+" </p></div>";
+            document.getElementById("infoB4").innerHTML = text;
+        } else {
+            mang.push(i);
+            text+= "<div class ='b4_style_le'><p>Đây là số lẻ "+mang[i-1]+"</p></div>"; 
+            document.getElementById("infoB4").innerHTML = text;
+        }
+    }
 }
