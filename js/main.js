@@ -221,9 +221,10 @@ function B5(){
 //B4
 
 function B4(){
+    var n = document.getElementById("b4").value*1;
     var mang = [];
     var text = "";
-    for(var i =1; i <= 10 ; i ++){
+    for(var i =1; i <= n ; i ++){
         if(i%2 == 0 ){
             // chan += "<div><p>"
             // chan += "Đây là thẻ div chẵn  "+i+" </p></div>";
